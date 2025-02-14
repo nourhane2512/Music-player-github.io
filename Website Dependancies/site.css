@@ -100,7 +100,7 @@ img {
 
 
 header {
-	background-color: #001bff;
+	background-color: #634e78;
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-top: 20px;
@@ -108,11 +108,11 @@ header {
 }
 
 .bg1 {
-	background-color: #ffe400;
+	background-color: #634e78;
 }
 
 .bg2 {
-	background-color: #001bff;
+	background-color: #634e78;
 }
 
 .bg3 {
@@ -136,5 +136,5 @@ footer {
 }
 
 #incomplete {
-	background-color: red;
+	background-color: rgb(76, 49, 91);
 }
