@@ -27,7 +27,8 @@ titleHeight = appHeight*1/10;
 //Divs
 rect(titleX, titleY, titleWidth, titleHeight);
 //
-//Font Size Algorithm 
+//Font Size Algorithm
+fontSize = titleHeight;
 fontSize = titleHeight;
 //
 color pinkInk = #A992AA;
