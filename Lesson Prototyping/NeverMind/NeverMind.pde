@@ -14,7 +14,7 @@ String[] fontlist = PFont.list();
 printArray(fontlist); 
  */
 float fontSize = shorterSide; 
-PFont titleFont = createFont("Georgia-Italic", fontSize);
+PFont titleFont = createFont("Courier New Italic", fontSize);
 //Tools / Create Font / Find Font / Do not Press "OK" , known bug
 //Population
 float titleX, titleY, titleWidth, titleHeight;
@@ -22,19 +22,27 @@ titleX = appWidth*1/4;
 titleY = appHeight*1/4;
 titleWidth = appWidth*1/2;
 titleHeight = appHeight*1/10;
+//
 //Divs
 rect(titleX, titleY, titleWidth, titleHeight);
 //
 //Font Size Algorithm
-fontSize = titleHeight;
+float CourierNewItalicAspectRatio = 1.04;
+fontSize = titleHeight * CourierNewItalicAspectRatio;
+textFont(titlefont, fontsize);
+println(textWidth(title) > titleWidth );
+if (textWidth(title) > titleWidth) {
+  fontSize = fontSize * 0.50;
+  println(textWidth(title), titleWidth );
+}
 
 color pinkInk = #A992AA;
 fill (pinkInk); // Ink, hexidecimal copied from color selector 
 textAlign (CENTER, CENTER); // Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [ TOP | CENTER | BOTTOM | BASELINE]
-textfont(titleFont, fontSize); // see variable note
+
 color White = #FFFFFF;
 fill (White);
 
 
-//text(title, titleX, titleY, titleWidth, titleHeight );
+//text(title, titleX, titleY, titleWidth, titleHeight 
