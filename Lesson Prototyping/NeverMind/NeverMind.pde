@@ -1,6 +1,12 @@
 // Text: Dynamic
 //
 //Gobal Variables
+Minim minim;
+int numberOfSongs = 1; //Best Practice
+AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
+AudioMetaData[] playListMetaData = new AudioMetaData[ numberOfSongs ];
+int currentSong = numberOfSongs - numberOfSongs; //ZERO
+
 float fontSize;
 PFont appFont;
 String title = "Boom! Stuning right?";
@@ -35,7 +41,7 @@ rect(titleX, titleY, titleWidth, titleHeight);
 //Font Size Algorithm
 float CourierNewItalicAspectRatio = 1.04; //AR = fontsize / rect(Height), unique for each font
 fontSize = titleHeight * CourierNewItalicAspectRatio;
-textFont(titlefont, fontsize);
+textFont(appfont, fontsize);
 println(textWidth(title) > titleWidth );
 while (textWidth(title) > titleWidth) {
   fontSize = fontSize * 0.50;
