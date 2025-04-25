@@ -20,13 +20,24 @@ int appWidth = width; //displayWidth
 int appHeight = height; //displayHeight
 int shorterSide = (appWidth >= appHeight ) ? appHeight : appWidth ; //Landscape, Portrait, & Square
  //
+ minim = new Minim(this);
+ String musicPathway = "Music/";
+ String song = "Mount Everest - Labrinth";
+ String fileExtensions_mp3 = ".mp3";
+ String musicDirectory = "../../../../" + musicPathway;
+ String file = musicDirectory + song + fileExtensions_mp3;
+ println( file);
+ playList[ currentSong ] = minim.loadFile( file );
+ playListMetaData[ currentSong ] = playList[ currentSong ].getMeData;
+ playList[currentSong].play();
+ //
 /*Fonts from OS
 println("Start of console");
 String[] fontlist = PFont.list(); 
 printArray(fontlist); 
  */
  fontSize = shorterSide;
- appFont = createFont("Courier New Italic", fontSize) 
+ appFont = createFont("Courier New Italic", fontSize);
  //Tools / Create Font / Find Font / Do not Press "OK" , known bug ( not loadFont() )
  //Population
 float titleX, titleY, titleWidth, titleHeight; 
@@ -56,7 +67,7 @@ textAlign (CENTER, CENTER); // Align X&Y, see Processing.org / Reference
 textFont(titleFont, fontSize); // see variable note 
 //textFont() has option to combine font declaration with textSize()
 //Drawing Text
-text(title, titleX, titleY, titleWidth, titleHeight);
+text( playListMetaData[curreentsong]title, titleX, titleY, titleWidth, titleHeight);
 color whiteInk = #FFFFFF;
 fill(whiteInk); //reset
 //
