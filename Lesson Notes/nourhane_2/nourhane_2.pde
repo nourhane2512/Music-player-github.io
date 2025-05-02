@@ -23,7 +23,7 @@ float loopinfiniteX, loopinfiniteY, loopinfiniteWidth, loopinfiniteHeight;
 float playX, playY, playWidth, playHeight;
 float timebarX, timebarY, timebarWidth, timebarHeight;
 float songartistX, songartistY, songartistWidth, songartistHeight;
-
+//Button variables
 
 void setup() {
   fullScreen();//displayWidth, displayheight
@@ -61,10 +61,10 @@ void setup() {
   stopWidth = appWidth * 0.100;
   stopHeight = appHeight * 0.100;
   
-  fastforwardX = appWidth * 0.420;
-  fastforwardY = appHeight * 0.40;
-  fastforwardWidth = appWidth * 0.26;
-  fastforwardHeight = appHeight * 0.16;
+  fastforwardX = appWidth * 0.50;
+  fastforwardY = appHeight * 0.50;
+  fastforwardWidth = appWidth * 0.150;
+  fastforwardHeight = appHeight * 0.100;
   
   fastreverseX = appWidth * 0.170;
   fastreverseY = appHeight * 0.820;
@@ -134,7 +134,7 @@ void setup() {
   //
    rect(quitX, quitY, quitWidth, quitHeight);
    rect(stopX, stopY, stopWidth, stopHeight);
-   //rect(fastforwardX, fastforwardY, fastforwardWidth, fastforwardHeight);
+   rect(fastforwardX, fastforwardY, fastforwardWidth, fastforwardHeight);
    //rect(fastreverseX, fastreverseY, fastreverseWidth, fastreverseHeight);
    //rect(shuffleX, shuffleY, shuffleWidth, shuffleHeight);
    //rect(muteX, muteY, muteWidth, muteHeight);
@@ -159,4 +159,4 @@ void mousePressed() {}
 //
 void KeyPressed() {}
 //
-//End MAIN Program
+`//End MAIN Program
