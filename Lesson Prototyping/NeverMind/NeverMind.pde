@@ -28,7 +28,7 @@ int shorterSide = (appWidth >= appHeight ) ? appHeight : appWidth ; //Landscape,
  String file = musicDirectory + song + fileExtensions_mp3;
  println( file);
  playList[ currentSong ] = minim.loadFile( file );
- playListMetaData[ currentSong ] = playList[ currentSong ].getMeData;
+ playListMetaData[currentSong] = playList[currentSong].getMetaData();
  playList[currentSong].play();
  //
 /*Fonts from OS
@@ -67,7 +67,7 @@ textAlign (CENTER, CENTER); // Align X&Y, see Processing.org / Reference
 textFont(titleFont, fontSize); // see variable note 
 //textFont() has option to combine font declaration with textSize()
 //Drawing Text
-text( playListMetaData[curreentsong]title, titleX, titleY, titleWidth, titleHeight);
+text( playListMetaData[currentsong]title, titleX, titleY, titleWidth, titleHeight);
 color whiteInk = #FFFFFF;
 fill(whiteInk); //reset
 //
