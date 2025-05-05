@@ -1,3 +1,10 @@
+//Library minim 
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
 // Text: Dynamic
 //
 //Gobal Variables
@@ -6,13 +13,18 @@ int numberOfSongs = 1; //Best Practice
 AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
 AudioMetaData[] playListMetaData = new AudioMetaData[ numberOfSongs ];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO
+//
+float musicMenuX, musicMenuY, musicMenuWidth, musicMenuHeight;
+//
+void setup() {
+//Dispaly
+
 
 float fontSize;
 PFont appFont;
 String title = "Boom! Stuning right?";
 //
 float titleX, titleY, titleWidth, titleHeight;
-void setup() {
   //Display
   //FullScreen
 size(700, 500);
