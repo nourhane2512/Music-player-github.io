@@ -1,4 +1,4 @@
-// Main Music Program - Detailed Custom Button Design (Quit button fixed)
+// Main Music Program - Detailed Custom Button Design (Keyboard functionality added)
 
 import ddf.minim.*;
 
